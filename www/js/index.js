@@ -47,6 +47,7 @@ localStorage.ipush=ipush;
 $(document).on("click","#BtnEnt",function() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
+	      alert(result.text);
           if(result.cancelled=='0'){
           $('#inputCard').val(result.text);
 		  localStorage.bar=result.text;
