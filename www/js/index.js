@@ -44,20 +44,7 @@ localStorage.ipush=ipush;
 });
 
 	    
-	    
-	    $(document).on("click","#TakePhoto",function() {
-	    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI });
 
-function onSuccess(imageURI) {
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
-}
-
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
-	    });
 
 $(document).on("click","#BtnEnt",function() {
   cordova.plugins.barcodeScanner.scan(
@@ -81,7 +68,7 @@ $(document).on("click","#BtnEnt",function() {
           resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
           orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
           disableAnimations : true, // iOS
-          disableSuccessBeep: false // iOS and Android
+          disableSuccessBeep: false
       }
    );
 });
