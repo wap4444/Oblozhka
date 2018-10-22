@@ -1,279 +1,636 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> 
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>CityCard</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Framework7</title>
+  <link rel="stylesheet" href="css/framework7.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
 </head>
 <body>
-<div class="useBlock" id="MAP" style="height:500px;">
-</div>
-	
-	
-	
-	
-	
-	
-	
-	
-<div class="useBlock active" id="cardBlock">
-<div class="row" style="padding-top:50px;">
-  <div class="col-sm-12 text-center"><img src="img/logo.png" width="200px"><br><img src="img/img_logo.png" width="100px"></div>
-  <div class="col-sm-12 text-center" style="padding-top:50px;">
-<div id="welcome">
-Добро пожаловать в систему CityCard. Пожалуйста добавьте карту.
-</div>
-	<br>
-<button type="button" class="btn btn-outline-dark btn-lg showBlock" id="activBtn" blname="activationBlock" style="width:70%;border-radius:50px;margin-top:25px;">ДОБАВИТЬ КАРТУ</button>
-	</div>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="page">
+        <div class="page-content">
+          <div class="block-title">Left Panel</div>
+          <div class="block">
+            <p>This is a left side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="panel-open">Right Panel</a></p>
+          </div>
+          <div class="block-title">Main View Navigation</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/accordion/" class="panel-close">Accordion</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Action Sheet</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">Badge</a>
+              </li>
+              <li>
+                <a href="/buttons/" class="panel-close">Buttons</a>
+              </li>
+              <li>
+                <a href="/cards/" class="panel-close">Cards</a>
+              </li>
+              <li>
+                <a href="/checkbox/" class="panel-close">Checkbox</a>
+              </li>
+              <li>
+                <a href="/chips/" class="panel-close">Chips/Tags</a>
+              </li>
+              <li>
+                <a href="/contacts-list/" class="panel-close">Contacts List</a>
+              </li>
+              <li>
+                <a href="/data-table/" class="panel-close">Data Table</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus mauris leo, eu bibendum neque congue non. Ut leo mauris, eleifend eu commodo a, egestas ac urna. Maecenas in lacus faucibus, viverra ipsum pulvinar, molestie arcu. Etiam lacinia venenatis dignissim. Suspendisse non nisl semper tellus malesuada suscipit eu et eros. Nulla eu enim quis quam elementum vulputate. Mauris ornare consequat nunc viverra pellentesque. Aenean semper eu massa sit amet aliquam. Integer et neque sed libero mollis elementum at vitae ligula. Vestibulum pharetra sed libero sed porttitor. Suspendisse a faucibus lectus.</p>
+            <p>Duis ut mauris sollicitudin, venenatis nisi sed, luctus ligula. Phasellus blandit nisl ut lorem semper pharetra. Nullam tortor nibh, suscipit in consequat vel, feugiat sed quam. Nam risus libero, auctor vel tristique ac, malesuada ut ante. Sed molestie, est in eleifend sagittis, leo tortor ullamcorper erat, at vulputate eros sapien nec libero. Mauris dapibus laoreet nibh quis bibendum. Fusce dolor sem, suscipit in iaculis id, pharetra at urna. Pellentesque tempor congue massa quis faucibus. Vestibulum nunc eros, convallis blandit dui sit amet, gravida adipiscing libero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-reveal">
+      <div class="view view-init view-right" name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">Framework7</div>
+            <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Search components"/>
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button">Cancel</span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="list searchbar-hide-on-search">
+            <ul>
+              <li>
+                <a class="item-content item-link" href="/about/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">About Framework7</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="block-title searchbar-found">Components</div>
+          <div class="list components-list searchbar-found">
+            <ul>
+              <li>
+                <a class="item-content item-link" href="/accordion/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Accordion</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/action-sheet/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Action Sheet</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/autocomplete/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Autocomplete</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/badge/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Badge</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/buttons/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Buttons</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/calendar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Calendar / Date Picker</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/cards/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Cards</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/checkbox/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Checkbox</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/chips/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Chips / Tags</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/contacts-list/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Contacts List</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/content-block/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Content Block</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/data-table/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Data Table</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/dialog/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Dialog</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/elevation/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Elevation</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/fab/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">FAB</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/fab-morph/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">FAB Morph</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/form-storage/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Form Storage</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/icons/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Icons</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/infinite-scroll/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Infinite Scroll</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/inputs/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Inputs</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/gauge/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Gauge</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/grid/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Grid / Layout Grid</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/lazy-load/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Lazy Load</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/list/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">List View</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/list-index/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">List Index</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/login-screen/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Login Screen</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/messages/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Messages</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/navbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Navbar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/notifications/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Notifications</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/panel/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Panel / Side Panels</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/picker/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Picker</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/photo-browser/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Photo Browser</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/popup/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Popup</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/popover/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Popover</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/preloader/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Preloader</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/progressbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Progress Bar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/pull-to-refresh/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Pull To Refresh</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/radio/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Radio</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/range/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Range Slider</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/searchbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Searchbar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/searchbar-expandable/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Searchbar Expandable</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/sheet-modal/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Sheet Modal</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/smart-select/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Smart Select</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/sortable/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Sortable List</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/statusbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Statusbar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/stepper/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Stepper</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/subnavbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Subnavbar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/swipeout/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Swipeout (Swipe To Delete)</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/swiper/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Swiper Slider</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/tabs/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Tabs</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/timeline/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Timeline</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/toast/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Toast</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/toggle/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Toggle</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/toolbar-tabbar/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Toolbar & Tabbar</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/tooltip/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Tooltip</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/virtual-list/">
+                  <div class="item-media"><i class="icon icon-f7"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">Virtual List</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item-content item-link" href="/vi/">
+                  <div class="item-media"><i class="icon icon-vi"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title">vi - Mobile Video SSP</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="list simple-list searchbar-not-found">
+            <ul>
+              <li>Nothing found</li>
+            </ul>
+          </div>
+          <div class="block-title searchbar-hide-on-search">Themes</div>
+          <div class="list links-list searchbar-hide-on-search">
+            <ul>
+              <li>
+                <a href="./index.html?theme=ios" class="external">iOS Theme</a>
+              </li>
+              <li>
+                <a href="./index.html?theme=md" class="external">Material (MD) Theme</a>
+              </li>
+              <li>
+                <a href="/color-themes/">Color Themes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
+          <div class="list links-list searchbar-hide-on-search">
+            <ul>
+              <li>
+                <a href="/page-loader-template7/vladimir/123/about-me/1/?start=0&end=30#top">Template7 Page</a>
+              </li>
+              <li>
+                <a href="/page-loader-component/vladimir/123/about-me/1/?start=0&end=30#top">Component Page</a>
+              </li>
+              <li>
+                <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-<div class="useBlock" id="activationBlock">
-<div class="row" style="padding-top:50px;">
-  <div class="col-sm-12 text-center"><img src="img/logo.png" width="200px"><br><img src="img/img_logo.png" width="100px"></div>
-  <div class="col-sm-12 text-center" style="padding-top:50px;">
-	<div class="input-group input-group-lg" style="display: inline;">
-	<input type="number" class="form-control" id="inputCard" style="width:70%;border-radius:50px;     display: inline;   background: #c3c300;" placeholder="Введите номер карты">
-	<br>
-	<button type="button" class="btn btn-outline-dark btn-lg" id="BtnEnt" style="width:70%;border-radius:50px;margin-top:25px;">Сканировать код</button>
-
-<div class="alert alert-danger" id="alertCardError" style="display:none;" role="alert"></div>
-	<br>
-<button type="button" class="btn btn-outline-dark btn-lg" id="addCard" style="width:70%;border-radius:50px;margin-top:25px;">Привязать карту</button>
-	</div>
-  </div>
-</div>
-</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
-<div class="useBlock" id="infoBlock">
-<div class="row" style="padding-top:50px;">
-  <div class="col-sm-12 text-center"><img src="img/logo.png" width="200px"><br><img src="img/img_logo.png" width="100px"><br>
-<p style="font-size:13px; padding-top:10px;">
-
-Единая электронная система оплаты проезда «City Card» улучшает качество обслуживания населения, повышает прозрачность финансовых потоков и налоговых сборов, значительно сокращает время посадки-высадки пассажиров, помогает выявлять безбилетников.<br>
-Проект  является неотъемлемой частью Плана модернизации транспортного комплекса в регионе, производящегося в рамках реализации государственной программы «Цифровой Казахстан».
-
-</p>
-  <div id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Цель проекта
-        </button>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-Реализация единой безбилетной системы оплаты проезда и повышение общего комфорта пассажирских перевозок
- </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-Основные задачи 
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-	  
-	  <ul class="list-group">
-  <li class="list-group-item">Реализация единой карточной системы для всех видов общественного транспорта в регионе;</li>
-  <li class="list-group-item">Обеспечение гибкой тарифной политики, с предусмотренными льготными категориями граждан, студентов и учащихся общеобразовательных школ с созданием персонализированных карт оплаты проезда;</li>
-  <li class="list-group-item">Формирование точной статистической отчетности о распределении пассажиропотоков;</li>
-  <li class="list-group-item">Эффективное планирование маршрутной сети;</li>
-  <li class="list-group-item">Учёт пассажиропотока.</li>
-</ul>	
- </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-Функционал 
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-	  
-	  <ul class="list-group">
-  <li class="list-group-item">Вкачестве носителя электронного проездного документа используются пластиковые бесконтактные карты с NFC чипом 13,57 MHz.</li>
-  <li class="list-group-item">Карты ЕЭСОП «City Card» вмещают в себя баланс денежных средств,  с которого происходит списание  денежных средств равных стоимости одной поездки на том или ином общественном транспорте с учётом отдельных тарифов для шестнадцати льготных категорий граждан.</li>
-  <li class="list-group-item">В транспортные средства устанавливаются специализированные устройства – валидаторы, предназначенные для считывания информации с электронной карты и регистрации проезда. </li>
-  <li class="list-group-item">Эффективное планирование маршрутной сети</li>
-  <li class="list-group-item">Каждый валидатор оснащён GPS-трекером</li>
-  <li class="list-group-item">Предусмотрен переносной валидатор для кондукторов общественного транспорта (в количестве одна штука на один автобус) для последующей работы кондуктора с ним в качестве устройства принимающего оплату с карты «City Card»</li>
-  <li class="list-group-item">Траектория пути общественного транспорта фиксируется и отображается на онлайн карте мобильного приложения «City Card»</li>
-  <li class="list-group-item">Онлайн расписание общественного транспорта отображается в отдельном разделе специального мобильного приложения  «City Card»</li>
-  <li class="list-group-item">Для 11 категорий граждан, которым государством установлен бесплатный проезд в общественном транспорте предусматриваются электронные проездные билеты «City Card» для возможности дальнейшего учёта их льготных прав при оплате проезда</li>
-  <li class="list-group-item">Для 5 категорий граждан, которым государством установлен проезд в общественном транспорте с постоянной скидкой, предусматриваются электронные проездные билеты «City Card» с регистрацией их в базе данных единой электронной системы оплаты проезда «City Card» для возможности дальнейшего учёта их льготных прав при оплате проезда</li>
-  <li class="list-group-item">Имеется возможность добавления дополнительных функций: видеонаблюдение и регистрация правонарушений, с дальнейшим подключением их к МПС ДВД</li>
-</ul>	
-
- </div>
-    </div>
-  </div>
+  <script type="text/javascript" src="cordova.js"></script>
   
-<!-- БЛОК-->
-  <div class="card">
-    <div class="card-header" id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-Преимущества «City Card» для администрации области и управления пассажирским транспортом
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-      <div class="card-body">
-	  
-	  <ul class="list-group">
-  <li class="list-group-item">Удобство, связанное с отсутствием необходимости держать в карманах и кошельках наличные деньги и монеты</li>
-  <li class="list-group-item">Повышение интереса жителей к общественному транспорту</li>
-  <li class="list-group-item">«City Card» позволит жителям самостоятельно отслеживать направление того или иного автобуса, видеть онлайн местоположение на маршрутной карте</li>
-  <li class="list-group-item">Использование мобильного приложения «City Card» значительно сократит время ожидания общественного транспорта на остановках города, так как жители всегда смогут рассчитать время прибытия автобуса к необходимой им локации</li>
-  <li class="list-group-item">Смена тарифа осуществляется без фактической замены действующей карты</li>
-  </ul>	
-
- </div>
-    </div>
-  </div>  
-<!-- БЛОК-->
-  <div class="card">
-    <div class="card-header" id="headingFive">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-Инструкция пользования электронной системой билетирования «City Card»
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-      <div class="card-body">
-	  
-	  <ul class="list-group">
-  <li class="list-group-item">Электронная карта «City Card» продаётся Пользователю по установленному тарифу и является инструментом пользования единой электронной системой оплаты проезда «City Card».</li>
-  <li class="list-group-item">Пополнение баланса карты осуществляется в специализированных пунктах обслуживания Пользователей системы, осуществляющих подключение к системе электронной карты с помощью терминалов пополнения (кассы банков-партнёров) и с помощью систем online оплаты.</li>
-  <li class="list-group-item">При зачислении денежных средств на электронную карту Пользователю необходимо внимательно проверять дату и время проведения операции, PAN карты (уникальный номер) на квитанции (чеке), печатаемой терминалом пополнения.</li>
-  <li class="list-group-item">Электронная карта «City Card» принимается к оплате за проезд в транспортных средствах – участниках единой электронной системы оплаты проезда «City Card», оборудованных транспортными терминалами (валидаторами).</li>
-  <li class="list-group-item">При осуществлении операции оплаты проезда с использованием электронной карты «City Card», Пользователю необходимо предъявить кондуктору (водителю) электронную карту «City Card» для проведения операции регистрации оплаты проезда. В качестве бланка строгой отчетности по проведенной операции Пользователь получает отрывной билет или билет, печатаемый транспортным терминалом (валидатором).</li>
-  <li class="list-group-item">Электронная карта «City Card» – микропроцессорная бесконтактная карта, поэтому для проведения операции Пользователю необходимо приложить и зафиксировать на 2–3 секунды электронную карту «City Card» на транспортном терминале (валидаторе), находящемся у кондуктора (водителя).</li>
-  <li class="list-group-item">Любой отказ в работе системы, в том числе выход из строя электронной карты «City Card», не освобождает Пользователя от оплаты проезда в транспортном средстве – участнике единой электронной системы оплаты проезда «City Card». В этом случае Пользователь обязан оплатить проезд наличными денежными средствами по тарифу, установленному на обслуживаемом маршруте.</li>
-  <li class="list-group-item">В случае утраты или выхода из строя электронной карты «City Card», Пользователю необходимо обратиться к  уполномоченной организации единой электронной системы оплаты проезда «City Card» для получения новой  электронной карты «City Card», взамен утраченной или пришедшей в негодность, на платной основе, согласно установленным тарифам.</li>
-  <li class="list-group-item">В случае утраты или выхода из строя электронной карты «City Card»  Пользователя, относящегося к льготной категории граждан, ему необходимо своевременно обратиться к уполномоченной организации с письменным заявлением о блокировании его электронной карты.</li>
-  <li class="list-group-item">На основании письменного заявления Пользователя, относящегося к льготной категории граждан, специалисты уполномоченной организации единой электронной системы оплаты проезда «City Card» блокируют электронную карту.</li>
-  <li class="list-group-item">После блокирования электронной карты Пользователя, относящегося к льготной категории граждан, восстановление баланса становится возможным на новой электронной карте «City Card» в течение 10 (десяти) рабочих дней после блокировки, при условии выполнения п.9 и п.10 настоящей Инструкции.</li>
-  <li class="list-group-item">Пользователю надлежит бережное обращение с электронной картой «City Card». Внутри электронной карты «City Card» находится микропроцессор с антенной, поэтому во избежание преждевременного выхода из строя, её нельзя изгибать, подвергать тепловому, химическому и мощному электромагнитному воздействию, помещать в жидкость.</li>
-  <li class="list-group-item">Информацию о сумме баланса на электронной карте, детализации и т.п. Пользователь может узнавать в специализированном мобильном приложении единой электронной системе оплаты проезда «City Card».</li>
-
-  </ul>	
-
- </div>
-    </div>
-  </div>
+  <script src="js/framework7.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
   
-  <!-- БЛОК-->
-  <div class="card">
-    <div class="card-header" id="headingSix">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-Утеря или кража карты 
-        </button>
-      </h5>
-    </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-      <div class="card-body">
-В случае утери карта «City Card» не восстанавливается (кроме карт льготников). 
-Баланс утерянной  электронной карты «City Card» не восстанавливается (кроме карт льготников).
-В случае утери или кражи карты вам необходимо приобрести новую карту «City Card». <br>
-Если вы относитесь к льготной категории граждан, при утере Вашей электронной карты «City Card», Вам необходимо незамедлительно обратиться в _____________ для скорейшей блокировки Вашей электронной карты и сохранения её баланса. 
-После восстановления Вашей электронной карты Вам будет необходимо вновь зарегистрировать Вашу электронную карту «City Card»  для создания в системе отдельной учётной записи по вашей льготной категории (регистрация осуществляется  при предъявлении официальных документов удостоверяющих права данных лиц на льготный или бесплатный проезд в общественном транспорте).
-
- </div>
-    </div>
-  </div>  
-  <!-- БЛОК-->
-  <div class="card">
-    <div class="card-header" id="headingSeven">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-Преждевременный выход карты  «City Card» из строя 
-        </button>
-      </h5>
-    </div>
-    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-      <div class="card-body">
-Отсутствие физической возможности пользоваться картой может  быть  вызвано  механическими  или  электрическими повреждениями поверхности карты и ее микроэлектронных компонентов. <br>
-В  случае  возникновения  подозрений  в  технической  неисправности  карты  пользователю следует обратиться к __________ для диагностики. <br>
-Если дефект действительно присутствует,  и  он  вызван  заводским  браком,  то  карта  будет перевыпущена для пользователя бесплатно. <br>
-В случае физического повреждения карты самим пользователем, повлекшей за собой техническую неисправность карты, пользователь приобретает новую электронную карту «City Card» за свой счёт.
-
- </div>
-    </div>
-  </div>
-  
-</div>
-  
-  </div>
-</div>
-</div>
-    
-    <footer class="footer">
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-<img src="img/nav.png" width="40px" id="showMap" blname="MAP" class="showBlock">
-    </div>
-    <div class="col text-center">
-<img src="img/card.png" width="40" id="showCard" blname="cardBlock" class="showBlock">
-    </div>
-    <div class="col text-center">
-<img src="img/info-icon.png" width="40px" id="showInfo"  blname="infoBlock" class="showBlock">
-    </div>
-  </div>
-</div>
-    </footer>
-    
-
-    <script type="text/javascript" src="cordova.js"></script>
-    
-<script src="jquery.min.js"></script>
-<script src="popper.min.js"></script>
-<script src="bootstrap.min.js"></script>
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
-<script src="app.js"></script>
-	
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
