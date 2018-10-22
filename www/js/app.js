@@ -30,3 +30,20 @@ var app = new Framework7({
     placementId: 'pltd4o7ibb9rc653x14',
   },
 });
+
+
+
+ $(document).on("click","#TakePhoto",function() {
+	    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI, // iOS and Android
+	  correctOrientation: true });
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+	    });
