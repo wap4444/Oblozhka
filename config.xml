@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="kz.citycard" version="0.39.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>CityCard</name>
+    <name>Обложка</name>
     <description>
         Complex Launch Storyboard
     </description>
