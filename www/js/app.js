@@ -37,15 +37,6 @@ $(document).on("click","#TakePhoto",function() {
 	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 	destinationType: Camera.DestinationType.FILE_URI, // iOS and Android
 	correctOrientation: true });
-
-function onSuccess(imageURI) {
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
-}
-
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
 });
 
 $(document).on("click","#TakeGal",function() {
@@ -54,21 +45,28 @@ $(document).on("click","#TakeGal",function() {
                     allowEdit: true,
                     destinationType: Camera.DestinationType.FILE_URI
                 });
+});
+
+
+
 function onSuccess(imageURI) {
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
+  	var image = document.getElementById('myImage');
+    	image.src = imageURI;
+	localStorage.imageURI=imageURI;
 }
 
 function onFail(message) {
     alert('Failed because: ' + message);
 }
-});
-
 
 $(document).on("click","#upload",function() {
+	alert('upload');
+	
+	fileee=localStorage.imageURI;
+	
                 var options = new FileUploadOptions();
                 options.fileKey = "file";
-                options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
+                options.fileName = fileee.substr(fileee.lastIndexOf('/') + 1);
                 options.mimeType = "image/jpeg";
 
                 var params = {};
@@ -80,7 +78,7 @@ $(document).on("click","#upload",function() {
 
                 var ft = new FileTransfer();
                 ft.upload(imageURI, "https://makitweb.com/demo/phonegap_camera/upload.php", function(result){
-                    alert('successfully uploaded ' + result.response);
+                    alert('successfully uploaded ' + result);
                 }, function(error){
                     alert('error : ' + JSON.stringify(error));
                 }, options);
