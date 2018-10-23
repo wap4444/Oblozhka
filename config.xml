@@ -25,6 +25,9 @@ Maksim Morozov
 <plugin name="onesignal-cordova-plugin"  source="npm" />
 <plugin name="cordova-plugin-camera" spec="~4.0.3" />
     
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+<plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
+    
     <!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
 <plugin name="phonegap-plugin-barcodescanner" />
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
