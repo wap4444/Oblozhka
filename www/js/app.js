@@ -60,10 +60,11 @@ function onFail(message) {
 }
 
 $(document).on("click","#upload",function() {
-	alert('upload');
 	
 	fileee=localStorage.imageURI;
 	
+	alert('upload'+fileee);
+
                 var options = new FileUploadOptions();
                 options.fileKey = "file";
                 options.fileName = fileee.substr(fileee.lastIndexOf('/') + 1);
@@ -77,7 +78,7 @@ $(document).on("click","#upload",function() {
                 options.chunkedMode = false;
 
                 var ft = new FileTransfer();
-                ft.upload(imageURI, "https://makitweb.com/demo/phonegap_camera/upload.php", function(result){
+                ft.upload(fileee, "http://oblozhka.mirada.kz/upl.php", function(result){
                     alert('successfully uploaded ' + result);
                 }, function(error){
                     alert('error : ' + JSON.stringify(error));
